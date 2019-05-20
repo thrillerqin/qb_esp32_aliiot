@@ -1,0 +1,118 @@
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 188777542, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:6132
+load:0x40078000,len:9900
+load:0x40080400,len:6556
+entry 0x4008075c
+I (29) boot: ESP-IDF v3.2-dirty 2nd stage bootloader
+I (29) boot: compile time 23:11:24
+I (29) boot: Enabling RNG early entropy source...
+I (35) boot: SPI Speed      : 40MHz
+I (39) boot: SPI Mode       : DIO
+I (43) boot: SPI Flash Size : 4MB
+I (47) boot: Partition Table:
+I (50) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+I (80) boot: End of partition table
+I (84) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x16dac ( 93
+612) map
+I (126) esp_image: segment 1: paddr=0x00026dd4 vaddr=0x3ffb0000 size=0x02ec0 ( 1
+1968) load
+I (131) esp_image: segment 2: paddr=0x00029c9c vaddr=0x40080000 size=0x00400 (
+1024) load
+0x40080000: _WindowOverflow4 at D:/QB_ESP32/esp-idf/components/freertos/xtensa_v
+ectors.S:1779
+
+I (133) esp_image: segment 3: paddr=0x0002a0a4 vaddr=0x40080400 size=0x05f6c ( 2
+4428) load
+I (152) esp_image: segment 4: paddr=0x00030018 vaddr=0x400d0018 size=0x69c68 (43
+3256) map
+0x400d0018: _stext at ??:?
+
+I (304) esp_image: segment 5: paddr=0x00099c88 vaddr=0x4008636c size=0x0b384 ( 4
+5956) load
+0x4008636c: ppMapTxQueue at ??:?
+
+I (333) boot: Loaded app from partition at offset 0x10000
+I (333) boot: Disabling RNG early entropy source...
+I (334) cpu_start: Pro cpu up.
+I (338) cpu_start: Starting app cpu, entry point is 0x40081018
+0x40081018: call_start_cpu1 at D:/QB_ESP32/esp-idf/components/esp32/cpu_start.c:
+246
+
+I (330) cpu_start: App cpu up.
+I (348) heap_init: Initializing. RAM available for dynamic allocation:
+I (355) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (361) heap_init: At 3FFB8FB0 len 00027050 (156 KiB): DRAM
+I (367) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (374) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (380) heap_init: At 400916F0 len 0000E910 (58 KiB): IRAM
+I (386) cpu_start: Pro cpu start user code
+I (69) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (151) wifi: wifi driver task: 3ffc07d8, prio:23, stack:3584, core=0
+I (151) wifi: wifi firmware version: 9415913
+I (151) wifi: config NVS flash: enabled
+I (151) wifi: config nano formating: disabled
+I (151) system_api: Base MAC address is not set, read default base MAC address f
+rom BLK0 of EFUSE
+I (161) system_api: Base MAC address is not set, read default base MAC address f
+rom BLK0 of EFUSE
+I (191) wifi: Init dynamic tx buffer num: 32
+I (191) wifi: Init data frame dynamic rx buffer num: 32
+I (201) wifi: Init management frame dynamic rx buffer num: 32
+I (201) wifi: Init static rx buffer size: 1600
+I (201) wifi: Init static rx buffer num: 10
+I (211) wifi: Init dynamic rx buffer num: 32
+I (311) phy: phy_version: 4008, c9ae59f, Jan 25 2019, 16:54:06, 0, 0
+I (311) wifi: mode : sta (d8:a0:1d:64:ff:c4)
+I (361) smartconfig: SC version: V2.8.0
+led off
+led on
+led off
+led on
+I (5181) wifi: ic_enable_sniffer
+I (5181) sc: SC_STATUS_FINDING_CHANNEL
+led off
+I (6151) smartconfig: TYPE: ESPTOUCH
+I (6151) smartconfig: T|AP MAC: 8c:f2:28:c9:8c:b8
+I (6151) sc: SC_STATUS_GETTING_SSID_PSWD
+led on
+led off
+led on
+led off
+I (9501) smartconfig: T|pswd: gsr123,,,
+I (9501) smartconfig: T|ssid: ZIROOM202
+I (9501) smartconfig: T|bssid: 8c:f2:28:c9:8c:b8
+I (9501) wifi: ic_disable_sniffer
+I (9511) sc: SC_STATUS_LINK
+I (9511) sc: SSID:ZIROOM202
+I (9511) sc: PASSWORD:gsr123,,,
+I (9661) wifi: n:1 1, o:1 0, ap:255 255, sta:1 1, prof:1
+led on
+I (10641) wifi: state: init -> auth (b0)
+I (10651) wifi: state: auth -> assoc (0)
+I (10651) wifi: state: assoc -> run (10)
+I (10981) wifi: connected with ZIROOM202, channel 1
+I (10991) wifi: pm start, type: 1
+
+led off
+led on
+led off
+I (13641) event: sta ip: 192.168.1.104, mask: 255.255.255.0, gw: 192.168.1.1
+I (13641) sc: WiFi Connected to ap
+led on
+led off
+led on
+I (16641) sc: SC_STATUS_LINK_OVER
+I (16641) sc: Phone ip: 192.168.1.102
+
+I (16641) sc: smartconfig over

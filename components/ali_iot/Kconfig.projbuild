@@ -1,0 +1,13 @@
+menu "ALI_IOT'S FUNCTION"
+	config ALI_IOT
+		bool "ENABLE ali iot"
+		default "n"
+endmenu
+
+
+
+
+
+
+
+
